@@ -1,16 +1,4 @@
-Toyota
-Cresta
-30
-2
-Toyota
-Chaser
-25
-3
-Toyota
-Mark II
-20
-5
-BMW
-AAA
-33
-31
+Grisha
+Mitsusosi
+76,2
+106

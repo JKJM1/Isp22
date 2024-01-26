@@ -30,33 +30,20 @@ namespace Пр_7
 
         private void B_Add_Click(object sender, EventArgs e)
         {
-            if (TB_Name.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Вы не ввели Марку");
-                TB_Name.Focus();
-            }
-            else if (TB_Firm.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Вы не ввели Фирму");
-                TB_Firm.Focus();
-            }
-            else if (TB_Fuel.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Вы не ввели Расход топлива");
-                TB_Fuel.Focus();
-            }
-            else if (TB_Weight.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Вы не ввели Вес");
-                TB_Weight.Focus();
-            }
-            else
+            Form2 Dialog = new Form2();
+            Dialog.Text = "Добавление машины";
+            Dialog.TB_Name.Text = "";
+            Dialog.TB_Firm.Text = "";
+            Dialog.TB_Fuel.Text = "";
+            Dialog.TB_Weight.Text = "";
+
+            if(Dialog.ShowDialog() == DialogResult.OK)
             {
                 Cars s = new Cars();
-                s.Name = TB_Name.Text;
-                s.Firm = TB_Firm.Text;
-                s.Fuel = Convert.ToDouble(TB_Fuel.Text);
-                s.Weight = Convert.ToInt32(TB_Weight.Text);
+                s.Name = Dialog.TB_Name.Text;
+                s.Firm = Dialog.TB_Firm.Text;
+                s.Fuel = Convert.ToDouble(Dialog.TB_Fuel.Text);
+                s.Weight = Convert.ToInt32(Dialog.TB_Weight.Text);
                 list_cars.Add(s);
 
                 DGV_List.RowCount = list_cars.Count;
@@ -67,12 +54,7 @@ namespace Пр_7
                     DGV_List[2, i].Value = list_cars[i].Fuel.ToString();
                     DGV_List[3, i].Value = list_cars[i].Weight.ToString();
                 }
-
-                TB_Name.Text = "";
-                TB_Firm.Text = "";
-                TB_Fuel.Text = "";
-                TB_Weight.Text = "";
-            }
+            }    
         }
 
         private void B_Delete_Click(object sender, EventArgs e)
@@ -107,33 +89,40 @@ namespace Пр_7
             sw.Close();
         }
 
-        private void B_SaveChanges_Click(object sender, EventArgs e)
+        private void B_Changes_Click(object sender, EventArgs e)
         {
-            Cars s = new Cars();
-            s.Name = TB_Name.Text;
-            s.Firm = TB_Firm.Text;
-            s.Fuel = Convert.ToDouble(TB_Fuel.Text);
-            s.Weight =Convert.ToInt32(TB_Weight.Text);
-            list_cars[DGV_List.CurrentRow.Index] = s;
-
-            DGV_List.RowCount = list_cars.Count;
-            for (int i = 0; i < list_cars.Count; i++)
+            if (DGV_List.CurrentRow != null)
             {
-                DGV_List[0, i].Value = list_cars[i].Name;
-                DGV_List[1, i].Value = list_cars[i].Firm;
-                DGV_List[2, i].Value = list_cars[i].Fuel.ToString();
-                DGV_List[3, i].Value = list_cars[i].Weight.ToString();
-            }
-        }
+                Form2 Dialog = new Form2();
+                Dialog.Text = "Изменение данных машины";
 
-        private void DGV_List_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int n = DGV_List.CurrentRow.Index;
-            TB_Name.Text = DGV_List[0, n].Value.ToString();
-            TB_Firm.Text = DGV_List[1, n].Value.ToString();
-            TB_Fuel.Text = DGV_List[2, n].Value.ToString();
-            TB_Weight.Text = DGV_List[3, n].Value.ToString();
-            B_SaveChanges.Visible = true;
+                int n = DGV_List.CurrentRow.Index;
+                Dialog.TB_Name.Text = DGV_List[0, n].Value.ToString();
+                Dialog.TB_Firm.Text = DGV_List[1, n].Value.ToString();
+                Dialog.TB_Fuel.Text = DGV_List[2, n].Value.ToString();
+                Dialog.TB_Weight.Text = DGV_List[3, n].Value.ToString();
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+                    Cars s = new Cars();
+                    s.Name = Dialog.TB_Name.Text;
+                    s.Firm = Dialog.TB_Firm.Text;
+                    s.Fuel = Convert.ToDouble(Dialog.TB_Fuel.Text);
+                    s.Weight = Convert.ToInt32(Dialog.TB_Weight.Text);
+                    list_cars[DGV_List.CurrentRow.Index] = s;
+
+                    DGV_List.RowCount = list_cars.Count;
+                    for (int i = 0; i < list_cars.Count; i++)
+                    {
+                        DGV_List[0, i].Value = list_cars[i].Name;
+                        DGV_List[1, i].Value = list_cars[i].Firm;
+                        DGV_List[2, i].Value = list_cars[i].Fuel.ToString();
+                        DGV_List[3, i].Value = list_cars[i].Weight.ToString();
+                    }
+                }
+            }
+            else
+                MessageBox.Show("Вы не выделили строку");
         }
 
         private void B_Load_Click(object sender, EventArgs e)
@@ -183,11 +172,6 @@ namespace Пр_7
                 DGV_List[2, i].Value = list_cars[i].Fuel.ToString();
                 DGV_List[3, i].Value = list_cars[i].Weight.ToString();
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
