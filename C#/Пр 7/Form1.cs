@@ -21,42 +21,11 @@ namespace Пр_7
             public int Weight;
             
         }
-
-        List<Cars> list_cars = new List<Cars>(); 
+        List<Cars> list_cars = new List<Cars>();
         public Form1()
         {
             InitializeComponent();
         }
-
-        private void B_Add_Click(object sender, EventArgs e)
-        {
-            Form2 Dialog = new Form2();
-            Dialog.Text = "Добавление машины";
-            Dialog.TB_Name.Text = "";
-            Dialog.TB_Firm.Text = "";
-            Dialog.TB_Fuel.Text = "";
-            Dialog.TB_Weight.Text = "";
-
-            if(Dialog.ShowDialog() == DialogResult.OK)
-            {
-                Cars s = new Cars();
-                s.Name = Dialog.TB_Name.Text;
-                s.Firm = Dialog.TB_Firm.Text;
-                s.Fuel = Convert.ToDouble(Dialog.TB_Fuel.Text);
-                s.Weight = Convert.ToInt32(Dialog.TB_Weight.Text);
-                list_cars.Add(s);
-
-                DGV_List.RowCount = list_cars.Count;
-                for (int i = 0; i < list_cars.Count; i++)
-                {
-                    DGV_List[0, i].Value = list_cars[i].Name;
-                    DGV_List[1, i].Value = list_cars[i].Firm;
-                    DGV_List[2, i].Value = list_cars[i].Fuel.ToString();
-                    DGV_List[3, i].Value = list_cars[i].Weight.ToString();
-                }
-            }    
-        }
-
         private void B_Delete_Click(object sender, EventArgs e)
         {
             if (DGV_List.CurrentRow != null)
