@@ -1,0 +1,12 @@
+C:\Users\JKJM\source\repos\Пр3 ОКФ\Пр3 ОКФ\obj\Debug\Пр3 ОКФ.csproj.AssemblyReference.cache
+C:\Users\JKJM\source\repos\Пр3 ОКФ\Пр3 ОКФ\obj\Debug\Пр3 ОКФ.csproj.SuggestedBindingRedirects.cache
+C:\Users\JKJM\source\repos\Пр3 ОКФ\Пр3 ОКФ\obj\Debug\Пр3_ОКФ.Form1.resources
+C:\Users\JKJM\source\repos\Пр3 ОКФ\Пр3 ОКФ\obj\Debug\Пр3_ОКФ.Properties.Resources.resources
+C:\Users\JKJM\source\repos\Пр3 ОКФ\Пр3 ОКФ\obj\Debug\Пр3 ОКФ.csproj.GenerateResource.cache
+C:\Users\JKJM\source\repos\Пр3 ОКФ\Пр3 ОКФ\obj\Debug\Пр3 ОКФ.csproj.CoreCompileInputs.cache
+C:\Users\JKJM\source\repos\Пр3 ОКФ\Пр3 ОКФ\obj\Debug\Пр3_ОКФ.Form2.resources
+C:\Users\JKJM\source\repos\Пр3 ОКФ\Пр3 ОКФ\bin\Debug\Пр3 ОКФ.exe.config
+C:\Users\JKJM\source\repos\Пр3 ОКФ\Пр3 ОКФ\bin\Debug\Пр3 ОКФ.exe
+C:\Users\JKJM\source\repos\Пр3 ОКФ\Пр3 ОКФ\bin\Debug\Пр3 ОКФ.pdb
+C:\Users\JKJM\source\repos\Пр3 ОКФ\Пр3 ОКФ\obj\Debug\Пр3 ОКФ.exe
+C:\Users\JKJM\source\repos\Пр3 ОКФ\Пр3 ОКФ\obj\Debug\Пр3 ОКФ.pdb
