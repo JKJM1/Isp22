@@ -111,14 +111,11 @@ namespace Пр3_ОКФ
                     if (listBox1.SelectedItem != null)
                     {
                         Form2 f = new Form2();
-
-                        // Получаем текущие значения цифр объекта перед открытием формы редактирования
                         Figura selectedFigura = listBox1.SelectedItem as Figura;
                         currentX = selectedFigura.X;
                         currentY = selectedFigura.Y;
                         currentH = selectedFigura.H;
 
-                        // Передаем текущие значения в форму редактирования
                         f.textBox1.Text = currentX.ToString();
                         f.textBox2.Text = currentY.ToString();
                         f.textBox3.Text = currentH.ToString();
@@ -129,7 +126,6 @@ namespace Пр3_ОКФ
                             int y = Convert.ToInt32(f.textBox2.Text);
                             int h = Convert.ToInt32(f.textBox3.Text);
 
-                            // Если значения не изменились, используем сохраненные значения
                             if (x == currentX && y == currentY && h == currentH)
                             {
                                 selectedFigura.Edit(currentX, currentY, currentH);
