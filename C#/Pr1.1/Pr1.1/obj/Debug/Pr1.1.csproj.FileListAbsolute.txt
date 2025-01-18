@@ -1,0 +1,11 @@
+C:\Users\JKJM\source\repos\Pr1.1\Pr1.1\bin\Debug\Pr1.1.exe.config
+C:\Users\JKJM\source\repos\Pr1.1\Pr1.1\bin\Debug\Pr1.1.exe
+C:\Users\JKJM\source\repos\Pr1.1\Pr1.1\bin\Debug\Pr1.1.pdb
+C:\Users\JKJM\source\repos\Pr1.1\Pr1.1\obj\Debug\Pr1.1.csproj.AssemblyReference.cache
+C:\Users\JKJM\source\repos\Pr1.1\Pr1.1\obj\Debug\Pr1.1.csproj.SuggestedBindingRedirects.cache
+C:\Users\JKJM\source\repos\Pr1.1\Pr1.1\obj\Debug\Pr1._1.Properties.Resources.resources
+C:\Users\JKJM\source\repos\Pr1.1\Pr1.1\obj\Debug\Pr1.1.csproj.GenerateResource.cache
+C:\Users\JKJM\source\repos\Pr1.1\Pr1.1\obj\Debug\Pr1.1.csproj.CoreCompileInputs.cache
+C:\Users\JKJM\source\repos\Pr1.1\Pr1.1\obj\Debug\Pr1.1.exe
+C:\Users\JKJM\source\repos\Pr1.1\Pr1.1\obj\Debug\Pr1.1.pdb
+C:\Users\JKJM\source\repos\Pr1.1\Pr1.1\obj\Debug\Pr1._1.ОС.resources
